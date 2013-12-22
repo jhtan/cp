@@ -15,4 +15,3 @@ This repository contains my solutions to the problems of programming competition
  - Tianjin Online Judge.
  - Topcoder.
  - Universidad de Valladolid Online Judge.
- - test.
