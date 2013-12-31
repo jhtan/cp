@@ -2,6 +2,7 @@
 *.slo
 *.lo
 *.o
+main
 
 # Compiled Dynamic libraries
 *.so
@@ -11,3 +12,9 @@
 *.lai
 *.la
 *.a
+
+# Emacs backups
+*.~
+
+# Standart Inputs Examples
+in
