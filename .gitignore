@@ -14,7 +14,7 @@ main
 *.a
 
 # Emacs backups
-*.~
+*~
 
 # Standart Inputs Examples
 in
