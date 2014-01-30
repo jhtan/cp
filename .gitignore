@@ -21,3 +21,6 @@ main
 
 # Java Binaries
 *.class
+
+# For the Arena TopCoder Applet
+ContestAppletProd.jnlp
