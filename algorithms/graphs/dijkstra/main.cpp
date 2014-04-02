@@ -19,12 +19,12 @@ vi parent(10001, 0);
 void dijkstra(int n) {
   dist[n] = 0;
   priority_queue<ii, vector<ii>, greater<ii> > pq;
-  pq.push(ii(n, 0));
+  pq.push(ii(0, n));
 
   while(!pq.empty()) {
     ii front = pq.top();
     pq.pop();
-    int u = front.first, d = front.second;
+    int u = front.second, d = front.first;
 
     if(d > dist[u])
       continue;
@@ -33,8 +33,8 @@ void dijkstra(int n) {
       ii v = G[u][i];
       if(dist[u] + v.second < dist[v.first]) {
       	dist[v.first] = dist[u] + v.second;
-  	    parent[v.first] = u;
-      	pq.push(ii(v.first, dist[v.first]));
+	parent[v.first] = u;
+      	pq.push(ii(dist[v.first], v.first));
       }
     }
   }
