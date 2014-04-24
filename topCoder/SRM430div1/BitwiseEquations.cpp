@@ -24,13 +24,14 @@ using namespace std;
 class BitwiseEquations {
 public:
   long long kthPlusOrSolution(int x, int k) {
-    int i=0, s = 0;
+    int i=0;
+    long long s = 0;
 
     while(x || k) {
 
       if(!(x % 2)) {
 	if(k % 2) {
-	  s += (1 << i);
+	  s += (1LL << i);
 	}
 	k /= 2;
       }
