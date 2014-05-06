@@ -1,3 +1,5 @@
+// Iterative implementation.
+
 #include <vector>
 #include <list>
 #include <map>
@@ -27,15 +29,6 @@ typedef pair<int, int>     ii;
 typedef vector<ii>         vii;
 typedef set<int>           si;
 typedef map<string, int>   msi;
-
-//#define for(i, a, b) \
-//  for(int i = int(a); i <= int(b); i++)
-//#define Rvi(c, it) \
-//  for(vi::iterator it = (c).begin(); it != (c).end(); it++)
-//#define Rvii(c, it) \
-//  for(vii::iterator it = (c).begin(); it != (c).end(); it++)
-//#define Rmsi(c, it) \
-//  for(msi::iterator it = (c).begin(); it != (c).end(); it++)
 
 int main() {
   int t;
