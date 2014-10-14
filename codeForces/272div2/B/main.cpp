@@ -41,10 +41,5 @@ int main() {
   double p = (double)c / (double)V.size();
   printf("%.12lf\n", p);
 
-  // if(c)
-  //   cout << p << endl;
-  // else
-  //   cout << 0 << endl;
-
   return 0;
 }
