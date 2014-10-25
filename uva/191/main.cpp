@@ -15,27 +15,27 @@ struct point {
   point(double a, double b) {x = a, y = b;}
 };
 
-point operator -(const point &A, const point &B) {
+point operator -(point A, point B) {
   return point(A.x - B.x, A.y - B.y);
 }
 
 // Cross product.
-double cross(const point &A, const point &B) {
+double cross(point A, point B) {
   return A.x * B.y - A.y * B.x;
 }
 
 // Area of parallelogram formed by two vectors.
-double area(const point &A, const point &B, const point &C) {
+double area(point A, point B, point C) {
   return cross(B-A, C-A);
 }
 
 // Determines whether point C is at the segment AB.
-bool onSegment(const point &A, const point &B, const point &C) {
+bool onSegment(point A, point B, point C) {
   return area(A, B, C) == 0 && min(A.x, B.x) <= C.x && C.x <= max(A.x, B.x) && min(A.y, B.y) <= C.y && C.y <= max(A.y, B.y);
 }
 
 // Determines whether the segment AB intersects the segment CD.
-bool intersects(const point &A, const point &B, const point &C, const point &D) {
+bool intersects(point A, point B, point C, point D) {
   double a1 = area(C, D, A);
   double a2 = area(C, D, B);
   double a3 = area(A, B, C);
