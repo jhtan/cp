@@ -1,0 +1,65 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+typedef long long          ll;
+typedef vector<int>        vi;
+typedef pair<int, int>     ii;
+typedef vector<ii>         vii;
+typedef set<int>           si;
+typedef map<string, int>   msi;
+
+int main() {
+  int n;
+  string s;
+  cin >> n >> s;
+  
+  // right
+  bool sw1 = true;
+  for(int i=0; i<n && sw1; i++) {
+    int x = s[i] - '0';
+
+    if(x == 3 || x == 6 || x == 9 || x == 0)
+      sw1 = false;
+    else
+      x++;
+  }
+
+  // left
+  bool sw2 = true;
+  for(int i=0; i<n && sw2; i++) {
+     int x = s[i] - '0';
+
+     if(x == 1 || x == 4 || x == 7 || x == 0)
+       sw2 = false;
+     else
+       x--;
+  }
+
+  // down
+  bool sw3 = true;
+  for(int i=0; i<n && sw3; i++) {
+     int x = s[i] - '0';
+
+     if(x == 7 || x == 0 || x == 9)
+       sw3 = false;
+     else
+       x+=3;
+  }
+
+  // up
+  bool sw4 = true;
+  for(int i=0; i<n && sw4; i++) {
+    int x = s[i] - '0';
+
+    if(x == 1 || x == 2 || x == 3)
+      sw4 = false;
+    else
+      x-=3;
+  }
+
+  if(sw1 || sw2 || sw3 || sw4) cout << "NO" << endl;
+  else cout << "YES" << endl;
+
+  return 0;
+}
